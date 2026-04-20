@@ -52,6 +52,28 @@ outlet_type = st.selectbox(
     format_func=lambda x: x[0]
 )[1]
 
+# if st.button("Predict"):
+
+#     data = {
+#         "item_weight": item_weight,
+#         "item_fat_content": item_fat_content,
+#         "item_visibility": item_visibility,
+#         "item_type": item_type,
+#         "item_mrp": item_mrp,
+#         "outlet_establishment_year": outlet_year,
+#         "outlet_size": outlet_size,
+#         "outlet_location_type": outlet_location_type,
+#         "outlet_type": outlet_type
+#     }
+
+#     response = requests.post("http://127.0.0.1:5000/predict", json=data)
+
+#     result = response.json()
+
+#     st.success(f"Prediction: {result['prediction']}")
+
+#     import requests
+
 if st.button("Predict"):
 
     data = {
@@ -70,4 +92,4 @@ if st.button("Predict"):
 
     result = response.json()
 
-    st.success(f"Prediction: {result['prediction']}")
+    st.success(f"Predicted Sales: {result['prediction']}")
