@@ -5,8 +5,14 @@ import numpy as np
 app = Flask(__name__)
 
 # Load once
-model = joblib.load("models/lr.save")
-scaler = joblib.load("models/sc.save")
+import os
+
+
+model_path = os.path.join("models", "lr.save")
+scaler_path = os.path.join("models", "sc.save")
+
+model = joblib.load(model_path)
+scaler = joblib.load(scaler_path)
 
 @app.route("/")
 def home():
