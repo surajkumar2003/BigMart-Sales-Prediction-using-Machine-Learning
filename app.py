@@ -5,8 +5,8 @@ import numpy as np
 app = Flask(__name__)
 
 # Load once
-model = joblib.load(r"F:\ml\Big_Mart_Sale\models\lr.save")
-scaler = joblib.load(r"F:\ml\Big_Mart_Sale\models\sc.save")
+model = joblib.load("models/lr.save")
+scaler = joblib.load("models/sc.save")
 
 @app.route("/")
 def home():
